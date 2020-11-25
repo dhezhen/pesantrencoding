@@ -11,7 +11,7 @@ class Mitra_model extends CI_model
 
         if ($upload_image) {
             $config['upload_path']      = './assets/img/mitra';
-            $config['allowed_types']    = 'gif|jgp|png';
+            $config['allowed_types']    = 'gif|jpg|jpeg|png';
             $config['max_size']         = '2048';
             $config['encrypt_name']     = 'true';
             $config['remove_space']     = 'true';
@@ -20,7 +20,8 @@ class Mitra_model extends CI_model
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('image')) {
-                echo "Upload Gagal";
+                $error = $this->upload->display_errors();
+                echo "Upload Gagal". $error;
                 die();
             } else {
                 $image = $this->upload->data('file_name');
@@ -33,6 +34,7 @@ class Mitra_model extends CI_model
             ];
             $this->db->insert('mitra', $data);
         } else {
+            echo "Silahkan";
         }
     }
 

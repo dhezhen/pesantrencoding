@@ -9,6 +9,7 @@ class Home extends CI_Controller
         $data['title'] = 'Pesantrencoding - Home';
         $data['sosmed'] = $this->db->get('sosmed')->result_array();
         $data['mitra'] = $this->db->get('mitra')->result_array();
+        $data['services']    = $this->db->get('services')->result_array(); 
         $this->load->view('front/header_nav', $data);
         $this->load->view('front/index');
         $this->load->view('front/footer');

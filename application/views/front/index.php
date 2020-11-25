@@ -71,20 +71,19 @@
 
 
                 <!-- Card -->
-                <?php for ($a = 1; $a <= 6; $a++) : { ?>
+                <?php foreach ($services as $serv) :  ?>
                         <div class="card">
-                            <img class="card-image" src="<?= base_url('assets/images/services-icon-3.svg') ?>" alt="alternative">
+                            <img class="card-image" src="<?= base_url('assets/img/service/').$serv['image'] ?>" alt="alternative">
                             <div class="card-body">
-                                <h4 class="card-title">Photography</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ex neque officia amet, cumque perferendis ullam! Quibusdam, consequuntur vitae placeat porro doloremque deleniti quae dignissimos! Ipsa et cum maxime debitis.</p>
+                                <h4 class="card-title"><?=$serv['name'];?></h4>
+                                <p><?=$serv['description']?></p>
                                 <div class="button-wrapper">
                                     <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">Detail Layanan</a>
                                 </div>
                             </div>
                         </div>
 
-                <?php }
-                endfor ?>
+                <?php   endforeach ?>
                 <!-- end of card -->
 
             </div> <!-- end of col -->
