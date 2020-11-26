@@ -18,6 +18,8 @@ class Home extends CI_Controller
     public function blog()
     {
         $data['title'] = 'Pesantrencoding - Blog';
+        $data['sosmed'] = $this->db->get('sosmed')->result_array();
+        $data['mitra'] = $this->db->get('mitra')->result_array();
         $this->load->view('front/header_nav', $data);
         $this->load->view('front/blog');
         $this->load->view('front/footer');
@@ -26,6 +28,8 @@ class Home extends CI_Controller
 
     public function privacy()
     {
+        $data['sosmed'] = $this->db->get('sosmed')->result_array();
+        $data['mitra'] = $this->db->get('mitra')->result_array();
         $data['title'] = 'Pesantrencoding - privacy policy';
         $this->load->view('front/header_nav', $data);
         $this->load->view('front/privacy-policy');
@@ -37,6 +41,8 @@ class Home extends CI_Controller
 
     public function terms()
     {
+        $data['sosmed'] = $this->db->get('sosmed')->result_array();
+        $data['mitra'] = $this->db->get('mitra')->result_array();
         $data['title'] = "Pesantrencoding - Term and Conditions";
         $this->load->view('front/header_nav', $data);
         $this->load->view('front/terms');

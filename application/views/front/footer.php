@@ -27,11 +27,11 @@
                 <div class="footer-col">
                     <h4 class>Social Media</h4>
 
-                    <?php foreach ($sosmed as $s) : ?>
+                    <?php foreach ($sosmed as $sos) : ?>
                         <span class="fa-stack">
-                            <a href="<?= $s['url'] ?>">
-                                <i class="fas fa-circle fa-stack-2x <?= $s["name"]; ?>"></i>
-                                <i class="fab fa-<?= $s['name']; ?> fa-stack-1x"></i>
+                            <a href="<?= $sos['url'] ?>">
+                                <i class="fas fa-circle fa-stack-2x <?= $sos["name"]; ?>"></i>
+                                <i class="fab fa-<?= $sos['name']; ?> fa-stack-1x"></i>
                             </a>
                         </span>
                     <?php endforeach; ?>
