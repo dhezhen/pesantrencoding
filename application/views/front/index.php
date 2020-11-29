@@ -427,31 +427,28 @@
                 <div class="col-lg-6">
 
                     <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <form  method="POST" action="<?=base_url('user/sendmessage');?>">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
+                            <input type="text" class="form-control-input" id="name" name="name"required>
                             <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
+                            <div class="small text-danger"><?= form_error('name') ?></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
+                            <input type="email" class="form-control-input" id="email" name="email" required>
                             <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
+                            <div class="small text-danger"><?= form_error('email') ?></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
+                            <textarea class="form-control-textarea" name="message" id="message" required></textarea>
+                            <label class="label-control" for="message">Your message</label>
+                            <div class="small text-danger"><?= form_error('email') ?></div>
                         </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree with Evolo's stated <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
+
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                            <button type="submit" class="form-control-submit-button">Kirim Pesan </button>
                         </div>
                         <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+
                         </div>
                     </form>
                     <!-- end of contact form -->

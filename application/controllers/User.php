@@ -106,4 +106,28 @@ class User extends CI_controller
             // }
         }
     }
+
+    public function sendMessage()
+    {
+        // $this->form_validation->set_rules('name', 'Name', 'required');
+        // $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        // $this->form_validation->set_rules('message', 'Message', 'required');
+        // if ($this->form_validation->run() == false) {
+        // } else {
+        $name = $this->input->post('name');
+        $email = $this->input->post('email');
+        $message = $this->input->post('message');
+
+        $data = [
+            'name'   => $name,
+            'email'  => $email,
+            'message' => $message
+
+        ];
+
+        $this->db->insert('inbox', $data);
+        echo 'alert("Pesan berhasil dikirim")';
+        redirect('home');
+    }
+
 }

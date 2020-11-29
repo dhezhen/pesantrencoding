@@ -8,12 +8,15 @@ class Admin extends CI_controller
         parent::__construct();
         //is_logged_in();
         $this->load->model('Admin_model');
+       
     }
 
     public function index()
     {
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['inbox'] = $this->db->get('inbox')->result_array();
+        $data['total_message'] = count($this->db->get('inbox')->result_array());
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -129,6 +132,7 @@ class Admin extends CI_controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['user_role'] = $this->Admin_model->getUserById($id);
         $data['list_role'] = $this->db->get('user_role')->result_array();
+       
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
