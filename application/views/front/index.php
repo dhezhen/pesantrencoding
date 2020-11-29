@@ -62,33 +62,33 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Apa Yang Kamu Butuhkan Ada Disini</h2>
-                <p class="p-heading p-large">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque ex sint veniam incidunt, eligendi atque dolores. Dignissimos fugit at quibusdam totam, aliquid delectus vitae quas minus enim, asperiores reiciendis repellendus?</p>
+                <h2>Business Growth Services</h2>
+                <p class="p-heading p-large">We serve small and medium sized companies in all tech related industries with high quality growth services which are presented below</p>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
+
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-12">
 
                 <!-- Card -->
-                <?php foreach ($services as $serv) :  ?>
+                <?php foreach ($services as $serv) : ?>
                     <div class="card">
-                        <img style="width: 250px;height:250px;" src="<?= base_url('assets/img/service/') . $serv['image'] ?>" alt="<?= $serv['name'] ?>">
+                        <img class="card-image" src="<?= base_url('assets/img/service/') . $serv['image']; ?>" alt="alternative">
                         <div class="card-body">
                             <h4 class="card-title"><?= $serv['name']; ?></h4>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg popup-with-move-anim" href="#<?= $serv['name'] ?>">Selengkapnya</a>
-                            </div>
+                            <p><?= $serv['description']; ?></p>
                         </div>
-                    </div>
 
-                <?php endforeach ?>
+                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">Selengkapnya</a>
+                    </div>
+                    <!-- end of card -->
+                <?php endforeach; ?>
 
 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
-</div> <!-- end of cards-1 -->
-<!-- end of services -->
+</div>
 
 
 <div class="basic-1">
@@ -145,107 +145,6 @@
     </div> <!-- end of container -->
 </div> <!-- end of basic-2 -->
 <!-- end of details 2 -->
-
-
-<div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-    <div class="container">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <div class="image-container">
-                    <img class="img-fluid" src="<?= base_url('assets/images/details-lightbox-1.svg') ?>" alt="alternative">
-                </div> <!-- end of image-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Design And Plan</h3>
-                <hr>
-                <h5>Core feature</h5>
-                <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
-                <p>Do you need to build lists for your email campaigns? It just got easier with Evolo.</p>
-                <ul class="list-unstyled li-space-lg">
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">List building framework</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Easy database browsing</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">User administration</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Automate user signup</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Quick formatting tools</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Fast email checking</div>
-                    </li>
-                </ul>
-                <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of lightbox-basic -->
-<!-- end of details lightbox 1 -->
-
-<!-- Details Lightbox 2 -->
-<div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-    <div class="container">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <div class="image-container">
-                    <img class="img-fluid" src="<?= base_url('assets/images/details-lightbox-2.svg') ?>" alt="alternative">
-                </div> <!-- end of image-container -->
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <h3>Search To Optimize</h3>
-                <hr>
-                <h5>Core feature</h5>
-                <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
-                <p>Do you need to build lists for your email campaigns? It just got easier with Evolo.</p>
-                <ul class="list-unstyled li-space-lg">
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">List building framework</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Easy database browsing</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">User administration</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Automate user signup</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Quick formatting tools</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-check"></i>
-                        <div class="media-body">Fast email checking</div>
-                    </li>
-                </ul>
-                <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of container -->
-</div> <!-- end of lightbox-basic -->
-<!-- end of details lightbox 2 -->
-<!-- end of details lightboxes -->
-<!-- portpolio -->
-
 <div id="portpolio" class="cards-2">
     <div class="container">
         <div class="row">
@@ -463,6 +362,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>About The Team</h2>
+
                     <p class="p-heading p-large">Meat our team of specialized marketers and business developers which will help you research new products and launch them in new emerging markets</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -565,7 +465,6 @@
 
     <!-- Details Lightbox 1 -->
     <?php foreach ($services as $serv) : ?>
-
         <div id="<?= $serv['name']; ?>" class="lightbox-basic zoom-anim-dialog mfp-hide center">
             <div class="container">
                 <div class="row center">
@@ -584,8 +483,112 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <button title="Close (Esc)" type="button" class="mfp-close x-button">X</button>
                 </div>
+
             </div>
+
         <?php endforeach; ?>
+
+
+
+        <div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+            <div class="container">
+                <div class="row">
+                    <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                    <div class="col-lg-8">
+                        <div class="image-container">
+                            <img class="img-fluid" src="<?= base_url('assets/images/details-lightbox-1.svg') ?>" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-4">
+                        <h3>Design And Plan</h3>
+                        <hr>
+                        <h5>Core feature</h5>
+                        <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
+                        <p>Do you need to build lists for your email campaigns? It just got easier with Evolo.</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">List building framework</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Easy database browsing</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">User administration</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Automate user signup</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Quick formatting tools</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Fast email checking</div>
+                            </li>
+                        </ul>
+                        <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of lightbox-basic -->
+        <!-- end of details lightbox 1 -->
+
+        <!-- Details Lightbox 2 -->
+        <div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+            <div class="container">
+                <div class="row">
+                    <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                    <div class="col-lg-8">
+                        <div class="image-container">
+                            <img class="img-fluid" src="<?= base_url('assets/images/details-lightbox-2.svg') ?>" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-4">
+                        <h3>Search To Optimize</h3>
+                        <hr>
+                        <h5>Core feature</h5>
+                        <p>The emailing module basically will speed up your email marketing operations while offering more subscriber control.</p>
+                        <p>Do you need to build lists for your email campaigns? It just got easier with Evolo.</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">List building framework</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Easy database browsing</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">User administration</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Automate user signup</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Quick formatting tools</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-check"></i>
+                                <div class="media-body">Fast email checking</div>
+                            </li>
+                        </ul>
+                        <a class="btn-solid-reg mfp-close page-scroll" href="#request">REQUEST</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of lightbox-basic -->
+        <!-- end of details lightbox 2 -->
+        <!-- end of details lightboxes -->
+        <!-- portpolio -->

@@ -15,7 +15,7 @@ class Service_model extends CI_Model{
 
         if($upload_image){
             $config['upload_path']      = './assets/img/service';
-            $config['allowed_types']    = 'gif|jpg|jpeg|png';
+            $config['allowed_types']    = 'svg|gif|jpg|jpeg|png|image/svg+xml';
             $config['max_size']         = '2048';
             $config['encrypt_name']     = 'true';
             $config['remove_space']     = 'true';
@@ -24,7 +24,7 @@ class Service_model extends CI_Model{
 
             $this->load->library('upload',$config);
             if(!$this->upload->do_upload('image')){
-                echo 'Upload Gagal';
+                echo $this->upload->display_errors();
                 die();
             }else{
                 $image = $this->upload->data('file_name');
