@@ -5,7 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             <?php if (validation_errors()) : ?>
                 <div class="alert alert-danger" role="danger">
                     <?= validation_errors(); ?>
@@ -21,20 +21,30 @@
                         <th scope="col">Menu</th>
                         <th scope="col">url</th>
                         <th scope="col">icon</th>
-                        <th scope="col">Active</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">status</th>
+                        <th class="text-center" scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach ($subMenu as $sm) : ?>
+                    <?php foreach ($subMenu as $sm) : 
+                          
+                        ?>
+                        
+                    
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
                             <td><?= $sm['title']; ?></td>
                             <td><?= $sm['menu']; ?></td>
                             <td><?= $sm['url']; ?></td>
                             <td><?= $sm['icon']; ?></td>
-                            <td><?= $sm['is_active']; ?></td>
+                            <td> <?php $sm['is_active'];
+                        if ($sm['is_active'] == '1') {
+                            echo "Active";
+                        } else {
+                            echo "Not Active";
+                        }
+                            ?></td>
                             <td>
                                 <a href="" type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit" data-sm_id="<?= $sm['id']; ?>" data-sm_menu_id="<?= $sm['menu_id']; ?>" data-sm_title="<?= $sm['title']; ?>" data-sm_menu="<?= $sm['menu']; ?>" data-sm_url="<?= $sm['url']; ?>" data-sm_icon='<?= $sm['icon']; ?>' data-active="<?= $sm['is_active']; ?>">Edit</a>
                                 <a href="<?= base_url('menu/deletesubmenu/') . $sm['id'] ?>" class="btn btn-danger" onclick="return confirm('are you sure wan to delete <?= $sm['title']; ?> ?')">Delete</a>
